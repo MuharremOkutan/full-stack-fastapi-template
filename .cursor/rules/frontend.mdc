@@ -1,0 +1,72 @@
+---
+description: 
+globs: frontend/**
+alwaysApply: false
+---
+Before diving into the best practices, please note that you may need to adapt the globs depending on your project's specific structure and file types.
+
+---
+name: chakra-ui-best-practices.mdc
+description: Best practices for using Chakra UI in React applications
+globs: **/*.{ts,tsx,js,jsx}
+---
+
+- Use Chakra UI's theme customization for consistent styling
+- Leverage Chakra's responsive props for mobile-first design
+- Utilize Chakra's accessibility features like aria attributes
+- Implement custom components using Chakra's style props
+
+---
+name: react-query-best-practices.mdc
+description: Best practices for managing data fetching with React Query
+globs: **/*.{ts,tsx,js,jsx}
+---
+
+- Use `useQuery` for fetching data and `useMutation` for updates
+- Implement proper error handling with `error` and `isError` states
+- Use `queryClient.invalidateQueries` for cache invalidation
+- Set appropriate `staleTime` and `cacheTime` for performance optimization
+
+---
+name: react-router-best-practices.mdc
+description: Best practices for routing with TanStack React Router
+globs: **/*.{ts,tsx,js,jsx}
+---
+
+- Use route loaders for data fetching before route activation
+- Implement route actions for handling form submissions
+- Utilize route error boundaries for graceful error handling
+- Use the `useMatch` hook for accessing route parameters
+
+---
+name: axios-best-practices.mdc
+description: Best practices for making HTTP requests with Axios
+globs: **/*.{ts,tsx,js,jsx}
+---
+
+- Use interceptors for global request/response handling
+- Implement proper error handling with `try/catch` blocks
+- Set appropriate timeouts for requests
+- Use Axios' cancel token for cancelling ongoing requests
+
+---
+name: react-hook-form-best-practices.mdc
+description: Best practices for form handling with React Hook Form
+globs: **/*.{ts,tsx,js,jsx}
+---
+
+- Use the `useForm` hook for form state management
+- Implement validation using the `register` function
+- Utilize the `watch` function for real-time form value monitoring
+- Use `handleSubmit` for proper form submission handling
+
+---
+name: next-themes-best-practices.mdc
+description: Best practices for managing themes with Next Themes
+globs: **/*.{ts,tsx,js,jsx}
+---
+
+- Use the `useTheme` hook for accessing and changing themes
+- Implement a theme toggle component for user control
+- Set a default theme in the `ThemeProvider`
+- Use `class` or `style` attributes for theme-based styling

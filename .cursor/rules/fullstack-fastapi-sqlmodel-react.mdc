@@ -1,0 +1,114 @@
+---
+description: 
+globs: backend/**
+alwaysApply: false
+---
+Before diving into the best practices, please note that you may need to adapt the globs depending on your project's specific file structure and requirements.
+
+---
+name: fastapi-best-practices.mdc
+description: Best practices for building FastAPI applications
+globs: **/*.py
+---
+
+- Use `Depends` for dependency injection to manage request lifecycles
+- Implement proper error handling with custom exception handlers
+- Use `BackgroundTasks` for non-blocking operations
+- Leverage `Response` models for custom HTTP responses
+- Utilize `APIRouter` for organizing large applications
+
+---
+name: pydantic-best-practices.mdc
+description: Best practices for using Pydantic for data validation and settings
+globs: **/*.py
+---
+
+- Use `Field` to add additional validation and metadata to models
+- Implement custom validators for complex validation logic
+- Use `root_validator` for cross-field validation
+- Leverage `pydantic_settings` for configuration management
+- Use `BaseModel` inheritance for reusable model structures
+
+---
+name: sqlalchemy-best-practices.mdc
+description: Best practices for using SQLAlchemy in database operations
+globs: **/*.py
+---
+
+- Use declarative base for defining models
+- Implement proper transaction management
+- Use `sessionmaker` for creating database sessions
+- Leverage ORM relationships for efficient querying
+- Use bulk operations for improved performance on large datasets
+
+---
+name: alembic-best-practices.mdc
+description: Best practices for database migrations with Alembic
+globs: **/*.py
+---
+
+- Use `autogenerate` cautiously and always review generated migrations
+- Implement proper versioning and naming conventions for migrations
+- Use `alembic revision` for manual migrations when needed
+- Test migrations in a staging environment before production deployment
+- Use `alembic downgrade` for rolling back migrations
+
+---
+name: pytest-best-practices.mdc
+description: Best practices for writing tests with Pytest
+globs: **/tests/*.py
+---
+
+- Use fixtures for setup and teardown of test environments
+- Implement parameterized tests for testing multiple scenarios
+- Use `pytest.mark` for categorizing and running specific tests
+- Leverage `pytest-cov` for measuring test coverage
+- Write descriptive test names and assertions for better readability
+
+---
+name: mypy-best-practices.mdc
+description: Best practices for static type checking with Mypy
+globs: **/*.py
+---
+
+- Use type hints consistently across your codebase
+- Implement proper type stubs for third-party libraries
+- Use `--strict` flag for more rigorous type checking
+- Leverage `mypy` configuration file for project-specific settings
+- Use `Any` sparingly and with caution
+
+---
+name: ruff-best-practices.mdc
+description: Best practices for using Ruff as a linter and formatter
+globs: **/*.py
+---
+
+- Configure Ruff to align with your project's style guide
+- Use `--fix` option to automatically fix linting issues
+- Integrate Ruff with your CI/CD pipeline for consistent code quality
+- Leverage Ruff's performance for faster linting and formatting
+- Use Ruff's configuration file to customize rules and settings
+
+---
+name: black-best-practices.mdc
+description: Best practices for code formatting with Black
+globs: **/*.py
+---
+
+- Use Black's default settings for consistent formatting
+- Integrate Black with your IDE for real-time formatting
+- Use `--check` option in CI/CD to enforce formatting standards
+- Leverage Black's speed for large codebases
+- Use Black's configuration file for project-specific settings
+
+---
+name: isort-best-practices.mdc
+description: Best practices for import sorting with Isort
+globs: **/*.py
+---
+
+- Use Isort's default settings for consistent import ordering
+- Integrate Isort with Black for seamless formatting
+- Use `--check` option in CI/CD to enforce import standards
+- Leverage Isort's configuration file for project-specific settings
+- Use Isort's `--atomic` option for safer import sorting

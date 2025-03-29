@@ -25,7 +25,35 @@ Then you can activate the virtual environment with:
 $ source .venv/bin/activate
 ```
 
-Make sure your editor is using the correct Python virtual environment, with the interpreter at `backend/.venv/bin/python`.
+### Alternative Setup with venv and pip
+
+If you prefer using standard Python tools, you can set up the project with venv and pip:
+
+1. Create a virtual environment:
+```console
+$ python -m venv venv
+```
+
+2. Activate the virtual environment:
+```console
+# On Linux/macOS
+$ source venv/bin/activate
+
+# On Windows
+$ venv\Scripts\activate
+```
+
+3. Install dependencies using pip:
+```console
+$ pip install -r requirements.txt
+```
+
+4. For development installation (editable mode):
+```console
+$ pip install -e .
+```
+
+Make sure your editor is using the correct Python virtual environment, with the interpreter at `backend/venv/bin/python` (or `backend/.venv/bin/python` if using uv).
 
 Modify or add SQLModel models for data and SQL tables in `./backend/app/models.py`, API endpoints in `./backend/app/api/`, CRUD (Create, Read, Update, Delete) utils in `./backend/app/crud.py`.
 
